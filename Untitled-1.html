@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+        h1 {
+            color: #ff4d4d;
+            animation: fadeIn 2s;
+        }
+        .heart {
+            color: #ff4d4d;
+            font-size: 100px;
+            animation: pulse 1s infinite;
+        }
+        .message {
+            font-size: 24px;
+            margin-top: 20px;
+            animation: fadeIn 3s;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #999;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .button {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            animation: fadeIn 4s;
+        }
+        .button:hover {
+            background-color: #e60000;
+        }
+        .funny-heading {
+            color: #ff0000;
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            .funny-heading {
+                font-size: 28px;
+            }
+            .message {
+                font-size: 20px;
+            }
+            .button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+        .emoji {
+            font-size: 50px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+    <div id="intro" class="visible">
+        <h1 class="funny-heading">Beyoncé Approves This Message!</h1>
+        <img src="https://i8.amplience.net/i/naras/beyonce-2025-grammys-speech.jpg" alt="Beyoncé">
+        <br>
+        <button class="button" onclick="enterSite()">Enter</button>
+    </div>
+    <div id="mainContent" class="hidden">
+        <h1>Happy Valentine's Day!</h1>
+        <div class="heart">❤️</div>
+        <div class="message">
+            <p>Dear Elrich,</p>
+            <p>I know you probably thought I wouldn’t give you anything for Valentine’s Day, but you were wrong. This isn’t much—just a small gesture to remind you that I do care.</p>
+            <p>Although we can get caught up in our everyday lives, I want you to know that we are still very important to one another. Today is a reminder of how much you're cared for, and you always have been.</p>
+            <p>Wishing you a day filled with love, happiness, and all the good things you deserve!</p>
+            <p>With all my love,</p>
+            <p>Luciano</p>
+            <div class="emoji">🥰😘</div>
+            <img src="https://media1.tenor.com/m/FuKTgeAkAmkAAAAC/beyonce-blow-a-kiss.gif" alt="Love GIF" style="width:100%;max-width:400px;">
+        </div>
+        <button class="button" onclick="showSurprise()">Click for a Surprise</button>
+        <div class="footer">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </div>
+    <script>
+        function enterSite() {
+            document.getElementById('intro').classList.remove('visible');
+            document.getElementById('intro').classList.add('hidden');
+            document.getElementById('mainContent').classList.remove('hidden');
+            document.getElementById('mainContent').classList.add('visible');
+        }
+
+        function showSurprise() {
+            window.location.href = "https://www.youtube.com/watch?v=ss7D0KEWl8Q&ab_channel=STEREOLYRICSTRACKS";
+        }
+    </script>
+</body>
+</html>
